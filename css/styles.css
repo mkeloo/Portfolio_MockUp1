@@ -107,6 +107,21 @@ img {
   height: 38px;
 }
 
+.overlay.overlay-sm .shape {
+  filter: brightness(0) invert(1);
+  opacity: 0.35;
+  height: 40px;
+}
+
+.overlay.overlay-sm .shape.wave {
+  height: initial;
+  width: 70px;
+}
+
+.overlay.overlay-sm .shape.xshape {
+  height: 30px;
+}
+
 .points {
   opacity: 0.3;
   position: absolute;
@@ -471,21 +486,6 @@ header .circle {
   background-color: var(--light-one);
   color: var(--main-color);
 }
-
-.overlay.overlay-sm .shape {
-  filter: brightness(0) invert(1);
-  opacity: 0.35;
-  height: 40px;
-}
-
-.overlay.overlay-sm .shape.wave {
-  height: initial;
-  width: 70px;
-}
-
-.overlay.overlay-sm .shape.xshape {
-  height: 30px;
-}
  
 .portfolio .square {
   top: 28%;
@@ -616,3 +616,70 @@ header .circle {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+
+.more-folio {
+  display: flex;
+  justify-content: center;
+}
+
+/* About */
+.about {
+  overflow: hidden;
+}
+
+.about img {
+  max-width: 600px;
+}
+
+.about .text {
+  margin-top: 1rem;
+}
+
+skills {
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.skill {
+  margin: 1rem 0;
+}
+
+.skill-title {
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.skill-bar {
+  position: relative;
+  overflow: hidden;
+  height: 8px;
+  width: 70%;
+  border-radius: 4px;
+  background-color: #ece6f8;
+}
+
+.skill-progress {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transition: 1s;
+}
+
+.about .column-1 {
+  position: relative;
+}
+
+.about .column-1:before {
+  content: "About";
+  position: absolute;
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--main-color);
+  opacity: 1;
+  top: 20px;
+  left: 0;
+  line-height: 0;
+}
