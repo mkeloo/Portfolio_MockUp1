@@ -424,7 +424,6 @@ header .circle {
   position: relative;
   width: 100%;
   background-color: var(--light-two);
-  min-height: 1200px;
 }
 
 .background-bg {
@@ -617,4 +616,3 @@ header .circle {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-/*  */
