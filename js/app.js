@@ -57,3 +57,18 @@ function countUp() {
     setTimeout(updateCount, 400);
   });
 }
+
+const mySwiper = new Swiper(".swiper-container", {
+  speed: 1100,
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
