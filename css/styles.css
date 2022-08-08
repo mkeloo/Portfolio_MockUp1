@@ -979,3 +979,22 @@ skills {
 }
 
 /* Contact Me */
+.contact {
+  width: 100%;
+  padding: 13.5rem 0 9.5rem 0;
+  background-color: var(--main-color);
+}
+
+.contact-box {
+  width: 100%;
+  background-color: var(--light-one);
+  border-radius: 45px;
+  padding: 5.5rem 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-info {
+
+}
+/* 2:42:28 */
