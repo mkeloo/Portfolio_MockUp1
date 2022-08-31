@@ -17,7 +17,7 @@
   </head>
   <body>
     <main>
-      <header>
+      <header id="header">
         <div class="overlay overlay-lg">
           <img src="img/shapes/square.png" alt="" class="shape square" />
           <img src="img/shapes/letters.png" alt="" class="letters" />
@@ -47,25 +47,25 @@
             <div class="links">
               <ul>
                 <li>
-                  <a href="#">Home</a>
+                  <a href="#header">Home</a>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <a href="#services">Services</a>
                 </li>
                 <li>
-                  <a href="#">Portfolio</a>
+                  <a href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#">Testimonials</a>
+                  <a href="#testimonials">Testimonials</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="#contact">Contact</a>
                 </li>
                 <li>
-                  <a href="#" class="active">Hire Me</a>
+                  <a href="#hireme" class="active">Hire Me</a>
                 </li>
               </ul>
             </div>
@@ -94,7 +94,7 @@
       </header>
 
       <!-- Services -->
-      <section class="services section">
+      <section class="services section" id="services">
         <div class="container">
           <div class="section-header">
             <h3 class="title" data-title="What I Do">Services</h3>
@@ -161,7 +161,7 @@
       </section>
 
       <!-- Portfolio -->
-      <section class="portfolio section">
+      <section class="portfolio section" id="portfolio">
         <div class="background-bg">
           <div class="overlay overlay-sm">
             <img
@@ -193,13 +193,13 @@
               ><button class="filter-btn" data-filter=".ui">UI/UX</button
               ><button class="filter-btn" data-filter=".webdev">Web Dev</button
               ><button class="filter-btn" data-filter=".appdev">App Dev</button
-              ><button class="filter-btn" data-filter=".logo">
+              ><button class="filter-btn" data-filter=".logo-design">
                 Graphic Design
               </button>
             </div>
 
             <div class="grid">
-              <div class="grid-item logo">
+              <div class="grid-item logo-design">
                 <div class="gallery-image">
                   <img src="img/portfolio/port1.jpg" alt="" />
 
@@ -255,7 +255,7 @@
                 </div>
               </div>
 
-              <div class="grid-item logo">
+              <div class="grid-item logo-design">
                 <div class="gallery-image">
                   <img src="img/portfolio/port5.jpg" alt="" />
 
@@ -283,7 +283,7 @@
                 </div>
               </div>
 
-              <div class="grid-item logo">
+              <div class="grid-item logo-design">
                 <div class="gallery-image">
                   <img src="img/portfolio/port7.jpg" alt="" />
 
@@ -333,7 +333,7 @@
       </section>
 
       <!-- About -->
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="container">
           <div class="section-header">
             <h3 class="title" data-title="Who am I?">About Me</h3>
@@ -514,7 +514,7 @@
       </section>
 
       <!-- Testimonials -->
-      <section class="testimonials section">
+      <section class="testimonials section" id="testimonials">
         <div class="container">
           <div class="section-header">
             <h3 class="title" data-title="What People Say">Testimonials</h3>
@@ -654,7 +654,7 @@
       </section>
 
       <!-- Contact Me -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <div class="contact-box">
             <div class="contact-info">
@@ -723,11 +723,9 @@
       </section>
 
       <!-- Hire Me -->
-      <section class="hireme">
+      <section class="hireme" id="hireme">
         <div class="container">
-          <h3 class="title" data-title="Hire me">
-            Let's talk about a project!
-          </h3>
+          <h3 class="title">Let's talk about a project!</h3>
           <p class="text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
             maiores, molestiae veniam est explicabo reiciendis. Mollitia sequi,
@@ -754,11 +752,11 @@
           <div class="grid-4-col footer-links">
             <h3 class="title-sm">Links</h3>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
 
@@ -821,14 +819,12 @@
             <div class="back-btn-wrap">
               <a href="#" class="back-btn">
                 <i class="fas fa-chevron-up"></i>
-                <i class="fas fa-chevron-up"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <!-- Starting now -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
