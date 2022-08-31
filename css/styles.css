@@ -9,7 +9,7 @@
   --light-three: #f6f7fb;
 }
 
-/* General Styles */
+/* Genral Styles */
 
 *,
 *::before,
@@ -46,8 +46,8 @@ img {
   position: relative;
   z-index: 5;
   max-width: 92rem;
-  margin: 0 auto;
   padding: 0 4rem;
+  margin: 0 auto;
 }
 
 .stop-scrolling {
@@ -118,7 +118,7 @@ img {
 
 .overlay.overlay-sm .shape {
   filter: brightness(0) invert(1);
-  opacity: 0.35;
+  opacity: 0.15;
   height: 40px;
 }
 
@@ -138,6 +138,7 @@ img {
 
 .section {
   padding: 7rem 0;
+  overflow: hidden;
 }
 
 .section-header {
@@ -154,7 +155,7 @@ img {
   margin-bottom: 0.6rem;
 }
 
-.title::before {
+.title:before {
   content: attr(data-title);
   display: block;
   margin-bottom: 0.4rem;
@@ -165,7 +166,7 @@ img {
   letter-spacing: 3px;
 }
 
-.title::after {
+.title:after {
   content: "";
   position: absolute;
   width: 90px;
@@ -205,7 +206,7 @@ img {
 }
 
 .btn:hover {
-  background-color: dodgerblue;
+  background-color: #6b44e0;
 }
 
 .btn.small {
@@ -213,7 +214,10 @@ img {
   font-size: 1rem;
 }
 
+/* End Genral Styles */
+
 /* Header */
+
 header {
   width: 100%;
   background-color: var(--light-three);
@@ -260,8 +264,8 @@ nav .container {
   color: var(--light-one);
   border-radius: 2rem;
   font-size: 1rem;
-  padding: 0.8rem 2.1rem;
-  margin-left: 0.9rem;
+  padding: 0.9rem 2.1rem;
+  margin-left: 1rem;
 }
 
 .links a:hover {
@@ -270,7 +274,7 @@ nav .container {
 
 .links a.active:hover {
   color: var(--light-one);
-  background-color: dodgerblue;
+  background-color: #6b44e0;
 }
 
 .hamburger-menu {
@@ -278,7 +282,7 @@ nav .container {
   height: 3rem;
   z-index: 100;
   position: relative;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-end;
 }
@@ -292,8 +296,8 @@ nav .container {
   transition: 0.5s;
 }
 
-.bar::before,
-.bar::after {
+.bar:before,
+.bar:after {
   content: "";
   position: absolute;
   width: 2.1rem;
@@ -303,25 +307,25 @@ nav .container {
   transition: 0.5s;
 }
 
-.bar::before {
+.bar:before {
   transform: translateY(-9px);
 }
 
-.bar::after {
+.bar:after {
   transform: translateY(9px);
 }
 
-nav.open .hamburger-menu {
+nav.open .hamburger-menu .bar {
   background-color: transparent;
   transform: rotate(360deg);
 }
 
-nav.open .hamburger-menu .bar::before {
+nav.open .hamburger-menu .bar:before {
   transform: translateY(0) rotate(45deg);
   background-color: var(--light-one);
 }
 
-nav.open .hamburger-menu .bar::after {
+nav.open .hamburger-menu .bar:after {
   transform: translateY(0) rotate(-45deg);
   background-color: var(--light-one);
 }
@@ -357,7 +361,7 @@ header .points1 {
   left: -150px;
 }
 
-header .point2 {
+header .points2 {
   width: 70%;
   top: 65%;
   left: 71%;
@@ -411,6 +415,8 @@ header .circle {
   opacity: 0.06;
 }
 
+/* End header */
+
 /* Services */
 
 .cards {
@@ -440,7 +446,7 @@ header .circle {
   transition: 0.3s;
 }
 
-.card::before {
+.card:before {
   content: attr(data-card);
   position: absolute;
   top: -15px;
@@ -449,10 +455,10 @@ header .circle {
   font-weight: 800;
   line-height: 1;
   color: var(--main-color);
-  opacity: 0.05;
+  opacity: 0.025;
 }
 
-.card::after {
+.card:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -467,7 +473,7 @@ header .circle {
   transform: translateY(-15px);
 }
 
-.card-wrap:hover .card::after {
+.card-wrap:hover .card:after {
   height: 8px;
 }
 
@@ -499,6 +505,8 @@ header .circle {
   pointer-events: none;
 }
 
+/* End Services */
+
 /* Portfolio */
 
 .portfolio {
@@ -517,11 +525,11 @@ header .circle {
 }
 
 .portfolio .title,
-.portfolio .title::before {
+.portfolio .title:before {
   color: var(--light-one);
 }
 
-.portfolio .title::after {
+.portfolio .title:after {
   background-color: var(--light-one);
 }
 
@@ -636,7 +644,7 @@ header .circle {
   justify-content: flex-end;
   padding: 2rem 3.2rem;
   opacity: 0;
-  transition: 0.5;
+  transition: 0.5s;
 }
 
 .img-overlay .plus {
@@ -644,8 +652,8 @@ header .circle {
   margin: auto 0;
 }
 
-.plus::before,
-.plus::after {
+.plus:before,
+.plus:after {
   content: "";
   position: absolute;
   width: 4.5rem;
@@ -657,7 +665,7 @@ header .circle {
   border-radius: 3px;
 }
 
-.plus::before {
+.plus:before {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
@@ -689,7 +697,10 @@ header .circle {
   justify-content: center;
 }
 
+/* End Portfolio */
+
 /* About */
+
 .about {
   overflow: hidden;
 }
@@ -702,7 +713,7 @@ header .circle {
   margin-top: 1rem;
 }
 
-skills {
+.skills {
   margin: 1.5rem 0 2.5rem 0;
 }
 
@@ -717,12 +728,12 @@ skills {
 }
 
 .skill-bar {
+  width: 70%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #ece6fa;
   position: relative;
   overflow: hidden;
-  height: 8px;
-  width: 70%;
-  border-radius: 4px;
-  background-color: #ece6f8;
 }
 
 .skill-progress {
@@ -745,7 +756,7 @@ skills {
   font-size: 8rem;
   font-weight: 800;
   color: var(--main-color);
-  opacity: 0.05;
+  opacity: 0.04;
   top: 20px;
   left: 0;
   line-height: 0;
@@ -757,6 +768,8 @@ skills {
   left: 80%;
   opacity: 0.1;
 }
+
+/* End About */
 
 /* Records */
 
@@ -791,7 +804,7 @@ skills {
 .record-circle.active {
   background-color: var(--light-one);
   color: var(--dark-one);
-  box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 15px rgb(255, 255, 255, 0.5);
 }
 
 .number {
@@ -845,6 +858,8 @@ skills {
   right: 50%;
 }
 
+/* End Records */
+
 /* Blog */
 
 .blog-wrapper {
@@ -868,10 +883,10 @@ skills {
   position: relative;
 }
 
-.blog-card::after {
+.blog-card:after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 1100%;
   height: 0px;
   bottom: 0;
   left: 0;
@@ -934,7 +949,7 @@ skills {
   transform: translateY(-15px);
 }
 
-.blog-card:hover::after {
+.blog-card:hover:after {
   height: 8px;
 }
 
@@ -948,12 +963,7 @@ skills {
   opacity: 0.15;
 }
 
-.blog .point2 {
-  width: 300px;
-  top: 20%;
-  left: 80%;
-  opacity: 0.1;
-}
+/* End Blog */
 
 /* Testimonials */
 
@@ -962,8 +972,8 @@ skills {
   overflow: hidden;
 }
 
-.test-content {
-  margin: 6rem;
+.testi-content {
+  margin-top: 6rem;
 }
 
 .reviews {
@@ -980,8 +990,8 @@ skills {
   top: 0;
   left: 0;
   color: var(--main-color);
-  opacity: 0.07;
-  font-size: 7rem;
+  opacity: 0.04;
+  font-size: 8rem;
 }
 
 .rate {
@@ -996,7 +1006,7 @@ skills {
 }
 
 .review-text {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 300;
   color: #444;
   line-height: 1.7;
@@ -1025,33 +1035,33 @@ skills {
   color: var(--main-color);
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none;
-}
-
 .swiper-button-next {
-  top: 36rem;
-  right: 50rem;
+  right: 2rem;
   left: initial;
 }
 
 .swiper-button-prev {
-  top: 36rem;
-  right: 53rem;
+  right: 4.5rem;
   left: initial;
 }
 
-/* Contact Me */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
+/* End Testimonials */
+
+/* Contact */
+
 .contact {
   position: relative;
   width: 100%;
-  padding: 13.5rem 0 9.5rem 0;
-  /* background-color: var(--main-color); */
+  padding: 13.5rem 0 8.5rem;
 }
 
-.contact::before,
-.contact::after {
+.contact:before,
+.contact:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1059,13 +1069,13 @@ skills {
   left: 0;
 }
 
-.contact::before {
+.contact:before {
   top: 0;
   height: 40%;
   background: url("../img/map.png") center center / cover;
 }
 
-.contact::after {
+.contact:after {
   top: 40%;
   height: 60%;
   background: url("../img/contact-bg.png") center bottom / cover;
@@ -1074,6 +1084,7 @@ skills {
 .contact-box {
   width: 100%;
   background-color: var(--light-one);
+  width: 100%;
   border-radius: 45px;
   padding: 5.5rem 4.5rem;
   display: grid;
@@ -1088,7 +1099,7 @@ skills {
   padding-left: 2rem;
 }
 
-.contact-info .title::after {
+.contact-info .title:after {
   left: 0;
   transform: initial;
 }
@@ -1127,7 +1138,7 @@ skills {
   display: inline-block;
 }
 
-.contact-form .title::after {
+.contact-form .title:after {
   display: none;
 }
 
@@ -1147,7 +1158,7 @@ skills {
   margin: 0.6rem 0;
   border: none;
   outline: none;
-  background: #e2dcf0;
+  background: #f3f3f3;
   border-radius: 4rem;
   font-weight: 600;
   font-size: 1.25rem;
@@ -1165,17 +1176,21 @@ skills {
 }
 
 .contact-input:hover {
-  background: #cdbdd9;
+  background: #ececec;
 }
 
 .contact-input:focus {
-  background: #f3d8f8;
+  background: #eaeaea;
 }
 
 .contact-input .btn {
   margin-top: 0.6rem;
 }
-/* Hire Me */
+
+/* End Contact */
+
+/* Hire me */
+
 .hireme {
   padding: 12rem 0;
 }
@@ -1190,10 +1205,13 @@ skills {
 
 .hireme .text {
   max-width: 1000px;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 1.6rem auto;
 }
 
+/* End Hire me */
+
 /* Footer */
+
 .footer {
   background-color: #222;
   padding: 6rem 0;
@@ -1240,7 +1258,7 @@ skills {
 }
 
 .footer-input {
-  background-color: #373737;
+  background: #373737;
   color: #333;
   outline: none;
   border: none;
@@ -1346,7 +1364,7 @@ skills {
   background-color: #6b44e0;
 }
 
-.back-btn-wrap::before {
+.back-btn-wrap:before {
   content: "";
   position: absolute;
   width: 60px;
@@ -1373,7 +1391,10 @@ skills {
   }
 }
 
-/* Responsive Design */
+/* End Footer */
+
+/* Responsive */
+
 @media (max-width: 1280px) {
   .text {
     font-size: 1rem;
@@ -1384,13 +1405,13 @@ skills {
     padding-bottom: 0.65rem;
   }
 
-  .title::before {
+  .title:before {
     margin-bottom: 0.2rem;
     font-size: 0.8rem;
     letter-spacing: 2px;
   }
 
-  .title::after {
+  .title:after {
     height: 3.5px;
     width: 70px;
   }
@@ -1435,7 +1456,7 @@ skills {
   }
 
   .overlay.overlay-lg .shape.xshape {
-    width: 24px;
+    height: 24px;
   }
 
   .overlay.overlay-sm .shape {
@@ -1448,7 +1469,7 @@ skills {
   }
 
   .overlay.overlay-sm .shape.xshape {
-    width: 19px;
+    height: 19px;
   }
 
   header .points1 {
@@ -1517,7 +1538,7 @@ skills {
     margin: 1rem 0;
   }
 
-  .card::before {
+  .card:before {
     font-size: 5rem;
   }
 
@@ -1550,8 +1571,8 @@ skills {
     padding: 1.4rem 2rem;
   }
 
-  .plus::before,
-  .plus::after {
+  .plus:before,
+  .plus:after {
     width: 2.8rem;
   }
 
@@ -1592,7 +1613,7 @@ skills {
     height: 6px;
   }
 
-  .about .column-1::before {
+  .about .column-1:before {
     font-size: 6rem;
     top: 13px;
   }
@@ -1783,7 +1804,7 @@ skills {
     font-size: 0.9rem;
   }
 
-  .back-btn-wrap::before {
+  .back-btn-wrap:before {
     width: 45px;
     height: 45px;
   }
@@ -1799,9 +1820,13 @@ skills {
     margin-bottom: 1rem;
   }
 
-  .column-1 {
+  .column-2 {
     margin-left: 0;
     margin-top: 1rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
   }
 
   .header-content {
@@ -1854,7 +1879,7 @@ skills {
     min-height: 80vh;
   }
 
-  letters,
+  .letters,
   header .half-circle2,
   header .points1,
   header .wave2 {
@@ -1923,6 +1948,10 @@ skills {
   }
 
   .portfolio .wave {
+    top: 33%;
+  }
+
+  .portfolio .circle {
     right: 20%;
   }
 
@@ -1934,7 +1963,7 @@ skills {
     width: 100%;
   }
 
-  .about .column-1::before {
+  .about .column-1:before {
     font-size: 5rem;
   }
 
@@ -1956,16 +1985,16 @@ skills {
     left: 48%;
   }
 
-  .records .square2 {
+  .records .sqaure2 {
     bottom: 45%;
     right: 50px;
   }
 
-  .test-content {
+  .testi-content {
     margin-top: 1.7rem;
   }
 
-  .test-content .image {
+  .testi-content .image {
     max-width: 500px;
     margin: 0 auto;
   }
@@ -1993,7 +2022,7 @@ skills {
     margin-top: 0.7rem;
   }
 
-  information:not(:last-child) {
+  .information:not(:last-child) {
     margin-bottom: 0.8rem;
   }
 
@@ -2001,11 +2030,11 @@ skills {
     min-height: 220px;
   }
 
-  .contact::before {
+  .contact:before {
     height: 25%;
   }
 
-  .contact::after {
+  .contact:after {
     height: 75%;
     top: 25%;
   }
@@ -2021,7 +2050,7 @@ skills {
     grid-column: 1 / 3;
   }
 
-  .footer-newsletter {
+  .footer-newstletter {
     grid-column: 1 / 3;
   }
 
@@ -2038,14 +2067,14 @@ skills {
 
   .bottom-footer {
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     padding: 1.5rem 0 0 0;
     margin-top: 2.5rem;
     position: relative;
   }
 
-  .bottom-footer::before {
+  .bottom-footer:before {
     content: "";
     position: absolute;
     width: 90%;
@@ -2061,3 +2090,114 @@ skills {
     margin-top: 0.8rem;
   }
 }
+
+@media (max-width: 600px) {
+  .grid-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 0.92rem;
+  }
+
+  .overlay.overlay-lg .shape {
+    height: 28px;
+  }
+
+  .overlay.overlay-lg .shape.wave {
+    height: initial;
+    width: 52px;
+  }
+
+  .overlay.overlay-lg .shape.xshape {
+    height: 22px;
+  }
+
+  .records .container {
+    grid-template-columns: 1fr;
+  }
+
+  .records .half-circle {
+    top: 50%;
+    left: 50px;
+  }
+
+  .records .wave2 {
+    bottom: 50%;
+    right: 20px;
+    left: initial;
+  }
+
+  .records .xshape {
+    right: 70px;
+  }
+
+  .records .square2 {
+    bottom: 90px;
+    right: 40px;
+  }
+
+  .testi-content {
+    margin-top: 1rem;
+  }
+
+  .review {
+    padding: 1.5rem 1rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+  }
+
+  .review-nav {
+    bottom: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .swiper-button-next {
+    right: 1.3rem;
+  }
+
+  .swiper-button-prev {
+    right: 3rem;
+  }
+
+  .contact {
+    padding: 8rem 0 5rem 0;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .contact-box {
+    padding: 2.3rem 2rem;
+    border-radius: 30px;
+  }
+
+  .contact:before {
+    background-size: 200%;
+  }
+
+  .contact-form .row {
+    grid-column-gap: 0.3rem;
+  }
+
+  .contact-input {
+    font-size: 0.8rem;
+    padding: 0.8rem 1.4rem;
+    margin: 0.25rem 0;
+  }
+}
+
+/* End Responsive */
